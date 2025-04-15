@@ -13,7 +13,7 @@ const flightsData = [
         arrivalCity: 'Bengaluru',
         duration: '02h 55m',
         isNonStop: true,
-        price: 5899,
+        price: 4564,
         onTimePerformance: '92%',
         priceLockAmount: 376,
     },
@@ -31,7 +31,37 @@ const flightsData = [
       price: 5899,
       onTimePerformance: '92%',
       priceLockAmount: 376,
-  }
+  },
+  {
+    id: 3,
+    logo: 'https://m.media-amazon.com/images/I/418wwCw2HuL.png',
+    airline: 'IndiGo',
+    flightNumber: '6E 2103',
+    departureTime: '07:00',
+    arrivalTime: '09:55',
+    departureCity: 'New Delhi',
+    arrivalCity: 'Bengaluru',
+    duration: '02h 55m',
+    isNonStop: true,
+    price: 5899,
+    onTimePerformance: '92%',
+    priceLockAmount: 376,
+},
+{
+  id: 4,
+  logo: 'https://m.media-amazon.com/images/I/418wwCw2HuL.png',
+  airline: 'IndiGo',
+  flightNumber: '6E 2103',
+  departureTime: '07:00',
+  arrivalTime: '09:55',
+  departureCity: 'New Delhi',
+  arrivalCity: 'Bengaluru',
+  duration: '02h 55m',
+  isNonStop: true,
+  price: 5899,
+  onTimePerformance: '92%',
+  priceLockAmount: 376,
+}
 ];
 
 // Hotels Data
@@ -62,7 +92,16 @@ const hotelsData = [
         price: 199,
         imageUrl: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3',
         perNight: true
-    }
+    },
+    {
+        id: 4,
+        name: 'GRAND LOTUS INN',
+        location: 'MG Road, City Center',
+        rating: 5,
+        price: 250,
+        imageUrl: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3',
+        perNight: true
+    },
 ];
 
 // Star Rating Component
@@ -86,7 +125,7 @@ const StarRating = ({ rating }) => {
 // Flight Card Component
 const FlightCard = ({ flight }) => {
     return (
-        <div className="bg-white rounded-lg shadow-md p-4 mb-4">
+        <div className="bg-white rounded-lg shadow-md p-4 ">
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                     <div className="w-8 h-8">
@@ -258,7 +297,7 @@ const Home = () => {
                 {showResults && (
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-xl font-bold text-gray-800 mb-4">Available Flights</h2>
+                            <h2 className="text-xl font-bold text-gray-800 mb-2">Available Flights</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {flightsData.map((flight) => (
                                     <FlightCard key={flight.id} flight={flight} />
@@ -268,7 +307,7 @@ const Home = () => {
 
                         <div>
                             <h2 className="text-xl font-bold text-gray-800 mb-4">Popular Hotels</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                                 {hotelsData.map((hotel) => (
                                     <HotelCard key={hotel.id} hotel={hotel} />
                                 ))}
