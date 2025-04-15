@@ -18,50 +18,50 @@ const flightsData = [
         priceLockAmount: 376,
     },
     {
-      id: 2,
-      logo: 'https://m.media-amazon.com/images/I/418wwCw2HuL.png',
-      airline: 'IndiGo',
-      flightNumber: '6E 2103',
-      departureTime: '07:00',
-      arrivalTime: '09:55',
-      departureCity: 'New Delhi',
-      arrivalCity: 'Bengaluru',
-      duration: '02h 55m',
-      isNonStop: true,
-      price: 5899,
-      onTimePerformance: '92%',
-      priceLockAmount: 376,
-  },
-  {
-    id: 3,
-    logo: 'https://m.media-amazon.com/images/I/418wwCw2HuL.png',
-    airline: 'IndiGo',
-    flightNumber: '6E 2103',
-    departureTime: '07:00',
-    arrivalTime: '09:55',
-    departureCity: 'New Delhi',
-    arrivalCity: 'Bengaluru',
-    duration: '02h 55m',
-    isNonStop: true,
-    price: 5899,
-    onTimePerformance: '92%',
-    priceLockAmount: 376,
-},
-{
-  id: 4,
-  logo: 'https://m.media-amazon.com/images/I/418wwCw2HuL.png',
-  airline: 'IndiGo',
-  flightNumber: '6E 2103',
-  departureTime: '07:00',
-  arrivalTime: '09:55',
-  departureCity: 'New Delhi',
-  arrivalCity: 'Bengaluru',
-  duration: '02h 55m',
-  isNonStop: true,
-  price: 5899,
-  onTimePerformance: '92%',
-  priceLockAmount: 376,
-}
+        id: 2,
+        logo: 'https://m.media-amazon.com/images/I/418wwCw2HuL.png',
+        airline: 'IndiGo',
+        flightNumber: '6E 2103',
+        departureTime: '07:00',
+        arrivalTime: '09:55',
+        departureCity: 'New Delhi',
+        arrivalCity: 'Bengaluru',
+        duration: '02h 55m',
+        isNonStop: true,
+        price: 5899,
+        onTimePerformance: '92%',
+        priceLockAmount: 376,
+    },
+    {
+        id: 3,
+        logo: 'https://m.media-amazon.com/images/I/418wwCw2HuL.png',
+        airline: 'IndiGo',
+        flightNumber: '6E 2103',
+        departureTime: '07:00',
+        arrivalTime: '09:55',
+        departureCity: 'New Delhi',
+        arrivalCity: 'Bengaluru',
+        duration: '02h 55m',
+        isNonStop: true,
+        price: 5899,
+        onTimePerformance: '92%',
+        priceLockAmount: 376,
+    },
+    {
+        id: 4,
+        logo: 'https://m.media-amazon.com/images/I/418wwCw2HuL.png',
+        airline: 'IndiGo',
+        flightNumber: '6E 2103',
+        departureTime: '07:00',
+        arrivalTime: '09:55',
+        departureCity: 'New Delhi',
+        arrivalCity: 'Bengaluru',
+        duration: '02h 55m',
+        isNonStop: true,
+        price: 5899,
+        onTimePerformance: '92%',
+        priceLockAmount: 376,
+    }
 ];
 
 // Hotels Data
@@ -265,27 +265,27 @@ const Home = () => {
         <div className="min-h-screen pt-16 bg-gradient-to-b from-blue-50 to-white">
             <div className="max-w-6xl mx-auto pt-10 px-4">
                 {/* Search Box */}
-                <div className="w-xl mx-auto bg-white rounded-2xl shadow-lg p-5 mb-8">
+                <div className="max-w-2xl w-full mx-auto bg-white rounded-2xl shadow-lg p-3 mb-8">
                     <form onSubmit={handleSubmit}>
                         <div>
                             <textarea
                                 value={travelQuery}
                                 onChange={(e) => setTravelQuery(e.target.value)}
                                 placeholder="Describe your travel preferences, destination, or ask any travel-related questions..."
-                                className="w-full p-4 border mb-3 border-gray-200 rounded-xl text-gray-700 text-sm"
+                                className="w-full p-4 border mb-3 border-gray-200 rounded-xl text-gray-700 text-sm resize-none"
                             />
                         </div>
-                        <div className="flex justify-center gap-3">
+                        <div className="flex flex-col sm:flex-row justify-center gap-3">
                             <button
                                 type="submit"
-                                className="px-3 py-1 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors duration-200 text-sm cursor-pointer"
+                                className="w-full sm:w-auto px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors duration-200 text-sm"
                             >
                                 Submit
                             </button>
                             <button
                                 type="button"
                                 onClick={handleReset}
-                                className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors duration-200 text-sm cursor-pointer"
+                                className="w-full sm:w-auto px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors duration-200 text-sm"
                             >
                                 Reset
                             </button>
